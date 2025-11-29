@@ -21,12 +21,12 @@ def verify_password(plain_text_password, hashed_password):
     # Verify the password
     return bcrypt.checkpw(password_bytes, hashed_bytes) # bycrypt.checkpw handles extracting salt and comapring then returns True or False
 
-# STEP 7: Registeration User Function
-def register_user(username, password):
-    '''Registers a new user by storing their username and hashed password.'''
+# STEP 7: Registeration User Function with week 8 extension for role
+def register_user(username, password, role='user'):
+    '''Registers a new user by storing their username, hashed password and role.'''
     hashed_password = hash_password(password)
     with open(USER_DATA_FILE, 'a') as f:
-        f.write(f"{username},{hashed_password}\n")
+        f.write(f"{username},{hashed_password},{role}\n")
     print(f"User {username} registered successfully.")
 
 # STEP 8: Check if User Exists Function
@@ -90,6 +90,7 @@ def validate_password(password):
     
     return (True, "is valid")
 
+
 # STEP 11: Implementing the Main Menu
 def display_menu():
     """Displays the main menu options."""
@@ -135,13 +136,19 @@ def main():
                 print("Error: Passwords do not match.")
                 continue
 
+            # Get role
+            role = input("Enter role (user/admin/analyst): ").strip().lower()
+            if role not in ['user', 'admin', 'analyst', '']:
+                print("Error: Invalid role. Please enter 'user', 'admin', or 'analyst'.")
+                continue
+
             # Check if user already exists
             if user_exists(username):
                 print(f"Error: Username {username} already exists.")
                 continue
             
             # Register the user
-            register_user(username, password)
+            register_user(username, password, role if role else 'user')
         
         elif choice == '2':
             # Login flow
