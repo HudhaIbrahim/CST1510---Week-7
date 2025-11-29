@@ -1,0 +1,6 @@
+alice,$2b$12$Eg3E5DYquE8dIO4okuCXZ.dSgl3NwnHes2SlVbFFpePlwX52Za8Ei
+Amsha,$2b$12$ECyCgHJJgvg3gghUM4qVy.zLG6SxukMHA401mW2KvMC9nxesy2wr.
+Zahny,$2b$12$EZD4eZ3bKZsIfCrw.0cUCOlxP74r/llzp8lyN7TsXzqMTLelkyd1e
+Youser,$2b$12$Z.cJ9E251V2RiKjKsmarRObyJTyZQJ/iM1RzvKymN5QI7IWJsnqIO
+Shada,$2b$12$b2fNzeIha7riHf32vA6nn.LRIbcPTGTfus5WEJ3/FJyI9JOl8x.3y
+Hanan,$2b$12$9S6cUnvNdmb0IhNpuKUEIOwYOjBExT9X6wWeId0JG3c6Cf5e.DrO6
